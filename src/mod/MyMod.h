@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ll/api/mod/NativeMod.h"
+#include "ll/api/plugin/NativePlugin.h"
 
 namespace my_mod {
 
@@ -9,9 +9,9 @@ class MyMod {
 public:
     static MyMod& getInstance();
 
-    MyMod(ll::mod::NativeMod& self) : mSelf(self) {}
+    MyMod(ll::plugin::NativePlugin& self) : mSelf(self) {}
 
-    [[nodiscard]] ll::mod::NativeMod& getSelf() const { return mSelf; }
+    [[nodiscard]] ll::plugin::NativePlugin& getSelf() const { return mSelf; }
 
     /// @return True if the mod is loaded successfully.
     bool load();
@@ -27,7 +27,7 @@ public:
     bool unload();
 
 private:
-    ll::mod::NativeMod& mSelf;
+    ll::plugin::NativePlugin& mSelf;
 };
 
 } // namespace my_mod

@@ -10,7 +10,7 @@
 #include "ll/api/event/ListenerBase.h"
 #include "ll/api/event/player/PlayerClickEvent.h"
 #include "ll/api/memory/Hook.h"
-#include "ll/api/mod/RegisterHelper.h"
+#include "ll/api/plugin/RegisterHelper.h"
 #include "mc/network/ServerNetworkHandler.h"
 #include "mc/network/packet/PlayerActionPacket.h"
 #include "mc/world/actor/player/Player.h"
@@ -106,4 +106,4 @@ bool MyMod::unload() {
 
 } // namespace my_mod
 
-LL_REGISTER_MOD(my_mod::MyMod, my_mod::instance);
+LL_REGISTER_PLUGIN(my_mod::MyMod, my_mod::instance);
